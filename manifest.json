@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "description": "Ad Blocker chrome extension",
-  "permissions": ["declarativeNetRequest"],
+  "permissions": ["declarativeNetRequest", "tabs", "activeTab"],
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -13,6 +13,10 @@
       }
     ]
   },
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["script.js"]
+  }],
   "icons": {
     "16": "icons/icon.png",
     "48": "icons/icon.png",
