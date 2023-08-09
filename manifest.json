@@ -1,0 +1,18 @@
+{
+  "name": "Ad Blocker Ninja",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Ad Blocker chrome extension",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "ruleset.json"
+      }
+    ]
+  }
+}
